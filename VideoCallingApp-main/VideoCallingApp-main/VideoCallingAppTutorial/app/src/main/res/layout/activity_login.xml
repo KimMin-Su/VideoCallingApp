@@ -3,8 +3,9 @@
     xmlns:tools = "http://schemas.android.com/tools"
     android:layout_width = "match_parent"
     android:layout_height = "match_parent"
-    android:background="@color/colorPrimary"
-    android:padding="30dp"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:background = "@color/colorPrimary"
+    android:padding = "30dp"
     tools:context = ".activities.LoginActivity">
 
     <LinearLayout
@@ -16,7 +17,82 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back"
+            android:id="@+id/goBack"
             android:padding="5dp">
         </ImageView>
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="LOGIN"
+            android:textSize="40sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"
+            ></TextView>
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:hint="Enter email?"
+                app:startIconDrawable ="@drawable/ic_email"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:id="@+id/edEmail"
+                    android:textColor="@color/black"
+
+                    ></com.google.android.material.textfield.TextInputEditText>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:hint="Enter password?"
+                app:startIconDrawable ="@drawable/ic_password"
+                app:endIconMode="password_toggle"
+                android:layout_marginTop="10dp"
+                app:endIconTint="@color/black"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:id="@+id/edPassword"
+                    android:textColor="@color/black"
+
+                    ></com.google.android.material.textfield.TextInputEditText>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="LOGIN"
+                android:textSize="22sp"
+                android:id="@+id/btnLogin"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                ></androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
     </LinearLayout>
+    <ProgressBar
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:id="@+id/progressBarLogin"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        ></ProgressBar>
 </RelativeLayout>
