@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".activities.RegisterActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_back"></ImageView>
+
+
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="REGISTER"
+            android:textSize="40dp"
+            android:textAllCaps="true"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            ></TextView>
+
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop="70dp"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+
+                app:startIconDrawable="@drawable/ic_insert_emoticon_gray_40dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:id="@+id/edName"
+                    android:hint="Enter name"
+                    android:textColor="@color/black"
+                    ></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+
+                android:layout_marginTop="10dp"
+                app:startIconDrawable="@drawable/ic_email"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:id="@+id/edEmail"
+                    android:hint="Enter email"
+                    android:textColor="@color/black"
+                    ></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+
+                android:layout_marginTop="10dp"
+                app:startIconDrawable="@drawable/ic_email"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/black"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:id="@+id/edPassword"
+                    android:hint="Enter password"
+                    android:textColor="@color/black"
+                    ></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="CREAT ACCOUNT"
+                android:textSize="22sp"
+                android:id="@+id/btnRegister"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                ></androidx.appcompat.widget.AppCompatButton>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
